@@ -1,4 +1,4 @@
-{ stdenv, fetchurl, dpkg, lib,
+{ stdenv, fetchurl, dpkg, lib, makeWrapper, symlinkJoin,
 alsa-lib, atk, cairo, cups, curl, dbus, expat, fontconfig, freetype, gdk-pixbuf, glib, glibc, gnome2, gnome, gnome-keyring, gtk3, libappindicator-gtk3, libdrm, libGL, libnotify, libpulseaudio, libsecret, libv4l, libxkbcommon, mesa, nspr, nss, pango, sqlcipher, systemd, wrapGAppsHook, xdg-utils, xorg, at-spi2-atk, libuuid, at-spi2-core }:
 
 ################################################################################
