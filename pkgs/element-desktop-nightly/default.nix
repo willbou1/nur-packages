@@ -1,6 +1,5 @@
 { stdenv, fetchurl, dpkg, lib, makeWrapper, symlinkJoin,
-alsa-lib, atk, cairo, cups, curl, dbus, expat, fontconfig, freetype, gdk-pixbuf, glib, glibc, gnome2, gnome, gnome-keyring, gtk3, libappindicator-gtk3, libdrm, libGL, libnotify, libpulseaudio, libsecret, libv4l, libxkbcommon, mesa, nspr, nss, pango, sqlcipher, systemd, wrapGAppsHook3, xdg-utils, xorg, at-spi2-atk, libuuid, at-spi2-core, libgbm }:
-
+alsa-lib, atk, cairo, cups, curl, dbus, expat, fontconfig, freetype, gdk-pixbuf, glib, glibc, gnome2, gnome-keyring, gtk3, libappindicator-gtk3, libdrm, libGL, libnotify, libpulseaudio, libsecret, libv4l, libxkbcommon, mesa, nspr, nss, pango, sqlcipher, systemd, wrapGAppsHook3, xdg-utils, at-spi2-atk, libuuid, at-spi2-core, libgbm, libxkbfile, libx11, libxcomposite, libxcursor, libxdamage, libxext, libxfixes, libxi, libxrandr, libxrender, libxtst, libxscrnsaver, libxcb }:
 ################################################################################
 # Based on element-desktop-nightly package from AUR:
 # https://aur.archlinux.org/packages/element-desktop-nightly-bin
@@ -48,19 +47,19 @@ let
         xdg-utils
 
         libxkbcommon
-        xorg.libxkbfile
-        xorg.libX11
-        xorg.libXcomposite
-        xorg.libXcursor
-        xorg.libXdamage
-        xorg.libXext
-        xorg.libXfixes
-        xorg.libXi
-        xorg.libXrandr
-        xorg.libXrender
-        xorg.libXtst
-        xorg.libXScrnSaver
-        xorg.libxcb
+        libxkbfile
+        libx11
+        libxcomposite
+        libxcursor
+        libxdamage
+        libxext
+        libxfixes
+        libxi
+        libxrandr
+        libxrender
+        libxtst
+        libxscrnsaver
+        libxcb
     ] + ":${stdenv.cc.cc.lib}/lib64";
 
     src = if stdenv.hostPlatform.system == "x86_64-linux" then
